@@ -8,5 +8,9 @@
 var prompt = require("prompt-sync")();
 
 var number = prompt("Enter a number: ");
-var result = number % 2 == 0 ? "even" : "odd";
-console.log("The number is ".concat(result, "."));
+var result = 0;
+number.toString().split("").map(function (value) {
+  result += parseInt(value);
+});
+var response = result % 2 == 0 ? "The number is even" : "The number is odd";
+console.log("".concat(response));
